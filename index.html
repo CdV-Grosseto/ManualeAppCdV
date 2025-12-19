@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,13 +19,18 @@
             --danger: #EF4444;
         }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, Helvetica, sans-serif; }
-        
-        body { 
-            background-color: var(--light); 
-            color: var(--text); 
-            display: flex; 
-            height: 100vh; 
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--text);
+            display: flex;
+            height: 100vh;
             overflow: hidden;
         }
 
@@ -49,7 +55,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .nav-links {
@@ -70,18 +76,32 @@
             font-size: 0.9rem;
         }
 
-        .nav-item:hover { background: rgba(255,255,255,0.1); color: var(--white); }
-        .nav-item.active { background: rgba(255,255,255,0.05); border-left-color: var(--primary); color: var(--primary); font-weight: 600; }
-        .nav-item .material-icons { margin-right: 10px; font-size: 1.2rem; }
-        
+        .nav-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+        }
+
+        .nav-item.active {
+            background: rgba(255, 255, 255, 0.05);
+            border-left-color: var(--primary);
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .nav-item .material-icons {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
         /* Stile speciale per il pulsante app */
         .nav-item.app-link {
             background: rgba(252, 211, 77, 0.15);
             color: var(--primary);
             font-weight: bold;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             margin-bottom: 10px;
         }
+
         .nav-item.app-link:hover {
             background: var(--primary);
             color: var(--dark);
@@ -100,65 +120,215 @@
         header {
             background: var(--white);
             padding: 15px 30px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
             display: flex;
             align-items: center;
             gap: 20px;
             z-index: 10;
         }
 
-        .search-container { flex: 1; position: relative; max-width: 600px; }
-        .search-container input {
-            width: 100%; padding: 12px 15px 12px 45px; border-radius: 8px;
-            border: 1px solid #e5e7eb; font-size: 1rem; background: #f9fafb; transition: all 0.3s;
+        .search-container {
+            flex: 1;
+            position: relative;
+            max-width: 600px;
         }
+
+        .search-container input {
+            width: 100%;
+            padding: 12px 15px 12px 45px;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+            font-size: 1rem;
+            background: #f9fafb;
+            transition: all 0.3s;
+        }
+
         .search-container input:focus {
-            outline: none; border-color: var(--primary); background: var(--white);
+            outline: none;
+            border-color: var(--primary);
+            background: var(--white);
             box-shadow: 0 0 0 3px rgba(252, 211, 77, 0.2);
         }
-        .search-icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: #9ca3af; }
+
+        .search-icon {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9ca3af;
+        }
 
         /* CONTENT */
-        .content-scroll { flex: 1; overflow-y: auto; padding: 30px; scroll-behavior: smooth; }
+        .content-scroll {
+            flex: 1;
+            overflow-y: auto;
+            padding: 30px;
+            scroll-behavior: smooth;
+        }
 
         .manual-section {
-            background: var(--white); border-radius: 12px; padding: 30px; margin-bottom: 30px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-top: 4px solid var(--primary);
+            background: var(--white);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border-top: 4px solid var(--primary);
             animation: fadeIn 0.3s ease-out;
         }
-        .manual-section.hidden { display: none; }
 
-        h2 { color: var(--dark); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; font-size: 1.5rem; border-bottom: 2px solid #f3f4f6; padding-bottom: 10px; }
-        h3 { color: var(--accent); margin: 25px 0 15px 0; font-size: 1.1rem; border-left: 3px solid var(--accent); padding-left: 10px; }
-        p { line-height: 1.6; color: #4b5563; margin-bottom: 15px; }
-        ul, ol { margin-left: 20px; margin-bottom: 15px; color: #4b5563; }
-        li { margin-bottom: 8px; line-height: 1.5; }
+        .manual-section.hidden {
+            display: none;
+        }
+
+        h2 {
+            color: var(--dark);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #f3f4f6;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: var(--accent);
+            margin: 25px 0 15px 0;
+            font-size: 1.1rem;
+            border-left: 3px solid var(--accent);
+            padding-left: 10px;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #4b5563;
+            margin-bottom: 15px;
+        }
+
+        ul,
+        ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+            color: #4b5563;
+        }
+
+        li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
 
         /* TABELLE */
-        .table-responsive { overflow-x: auto; -webkit-overflow-scrolling: touch; } /* Scroll orizzontale su mobile */
-        .example-table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.9rem; min-width: 500px; /* Forza larghezza minima per leggibilità */ }
-        .example-table th, .example-table td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
-        .example-table th { background: #f9fafb; font-weight: 600; color: var(--dark); }
-        .example-table td.good { color: var(--success); font-weight: 500; }
-        .example-table td.bad { color: var(--danger); text-decoration: line-through; color: #999; }
+        .table-responsive {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* Scroll orizzontale su mobile */
+        .example-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 0.9rem;
+            min-width: 500px;
+            /* Forza larghezza minima per leggibilità */
+        }
+
+        .example-table th,
+        .example-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .example-table th {
+            background: #f9fafb;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .example-table td.good {
+            color: var(--success);
+            font-weight: 500;
+        }
+
+        .example-table td.bad {
+            color: var(--danger);
+            text-decoration: line-through;
+            color: #999;
+        }
 
         /* BOX INFO */
-        .info-box { padding: 15px; border-radius: 8px; margin: 15px 0; display: flex; gap: 15px; align-items: flex-start; }
-        .info-box.tip { background: #eff6ff; border: 1px solid #bfdbfe; color: #1e40af; }
-        .info-box.warning { background: #fef2f2; border: 1px solid #fecaca; color: #991b1b; }
-        .info-box.tech { background: #f0fdf4; border: 1px solid #bbf7d0; color: #166534; }
+        .info-box {
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .info-box.tip {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            color: #1e40af;
+        }
+
+        .info-box.warning {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            color: #991b1b;
+        }
+
+        .info-box.tech {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            color: #166534;
+        }
 
         /* TAGS */
-        .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin: 0 2px; }
-        .tag.sospetto { background: #fee2e2; color: #991b1b; }
-        .tag.degrado { background: #dcfce7; color: #166534; }
-        .tag.aiuto { background: #fce7f3; color: #9d174d; }
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin: 0 2px;
+        }
+
+        .tag.sospetto {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        .tag.degrado {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .tag.aiuto {
+            background: #fce7f3;
+            color: #9d174d;
+        }
 
         /* ANIMAZIONE ATTENZIONE ICONA */
         @keyframes pulse-attention {
-            0% { transform: scale(1); color: var(--primary-dark); filter: drop-shadow(0 0 0 rgba(0,0,0,0)); }
-            50% { transform: scale(1.2); color: #ea580c; filter: drop-shadow(0 0 5px rgba(252, 211, 77, 0.6)); }
-            100% { transform: scale(1); color: var(--primary-dark); filter: drop-shadow(0 0 0 rgba(0,0,0,0)); }
+            0% {
+                transform: scale(1);
+                color: var(--primary-dark);
+                filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+            }
+
+            50% {
+                transform: scale(1.2);
+                color: #ea580c;
+                filter: drop-shadow(0 0 5px rgba(252, 211, 77, 0.6));
+            }
+
+            100% {
+                transform: scale(1);
+                color: var(--primary-dark);
+                filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+            }
         }
 
         .attention-icon {
@@ -168,24 +338,77 @@
             margin-right: 5px;
         }
 
-        .menu-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--dark); }
-        
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
         @media (max-width: 768px) {
-            aside { position: fixed; left: -280px; height: 100%; box-shadow: 2px 0 10px rgba(0,0,0,0.2); }
-            aside.open { transform: translateX(280px); }
-            .menu-toggle { display: block; }
-            header { padding: 15px; gap: 10px; }
-            .content-scroll { padding: 15px; }
-            .overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 90; }
-            .overlay.active { display: block; }
-            
+            aside {
+                position: fixed;
+                left: -280px;
+                height: 100%;
+                box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+            }
+
+            aside.open {
+                transform: translateX(280px);
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            header {
+                padding: 15px;
+                gap: 10px;
+            }
+
+            .content-scroll {
+                padding: 15px;
+            }
+
+            .overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 90;
+            }
+
+            .overlay.active {
+                display: block;
+            }
+
             /* Ottimizzazione Tabella Mobile */
-            .example-table th, .example-table td { padding: 8px; font-size: 0.85rem; }
+            .example-table th,
+            .example-table td {
+                padding: 8px;
+                font-size: 0.85rem;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <aside id="sidebar">
@@ -198,7 +421,7 @@
             <a href="https://cdv-grosseto.github.io/CdV-Grosseto/" class="nav-item app-link" target="_blank">
                 <span class="material-icons">open_in_new</span> VAI ALL'APP C.d.V
             </a>
-            
+
             <!-- MENU MANUALE -->
             <a href="#installazione" class="nav-item active" onclick="activateNav(this)">
                 <span class="material-icons">download</span> Installazione App
@@ -239,7 +462,9 @@
             </button>
             <div class="search-container">
                 <span class="material-icons search-icon">search</span>
-                <input type="text" id="searchInput" placeholder="Cerca nel manuale (es. 'registrazione', 'errore', 'internet')..." oninput="smartSearch()">
+                <input type="text" id="searchInput"
+                    placeholder="Cerca nel manuale (es. 'registrazione', 'errore', 'internet')..."
+                    oninput="smartSearch()">
             </div>
         </header>
 
@@ -248,12 +473,14 @@
             <!-- INSTALLAZIONE -->
             <section id="installazione" class="manual-section">
                 <h2>
-                    <a href="https://cdv-grosseto.github.io/CdV-Grosseto/" target="_blank" style="text-decoration:none;">
+                    <a href="https://cdv-grosseto.github.io/CdV-Grosseto/" target="_blank"
+                        style="text-decoration:none;">
                         <span class="material-icons attention-icon" title="Clicca per aprire l'App">download</span>
-                    </a> 
+                    </a>
                     Installazione (Android & iOS)
                 </h2>
-                <p>Questa è una <b>PWA (Progressive Web App)</b>. Non la troverai sugli store tradizionali, ma si installa direttamente dal browser per garantire aggiornamenti istantanei.</p>
+                <p>Questa è una <b>PWA (Progressive Web App)</b>. Non la troverai sugli store tradizionali, ma si
+                    installa direttamente dal browser per garantire aggiornamenti istantanei.</p>
 
                 <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
                     <div>
@@ -279,15 +506,18 @@
 
             <!-- REGISTRAZIONE -->
             <section id="registrazione" class="manual-section">
-                <h2><span class="material-icons" style="color:var(--primary-dark)">person_add</span> Registrazione e Primo Accesso</h2>
+                <h2><span class="material-icons" style="color:var(--primary-dark)">person_add</span> Registrazione e
+                    Primo Accesso</h2>
                 <p>Per utilizzare l'applicazione è necessario creare un account personale. Ecco come fare:</p>
-                
+
                 <ol>
                     <li>Apri l'applicazione.</li>
-                    <li>Nella schermata di login, clicca sulla scritta in basso <b>"Non hai un account? Registrati"</b>.</li>
+                    <li>Nella schermata di login, clicca sulla scritta in basso <b>"Non hai un account? Registrati"</b>.
+                    </li>
                     <li>Compila i campi richiesti:
                         <ul>
-                            <li><b>Nome e Cognome:</b> Fondamentale per essere riconosciuti dal coordinatore del gruppo.</li>
+                            <li><b>Nome e Cognome:</b> Fondamentale per essere riconosciuti dal coordinatore del gruppo.
+                            </li>
                             <li><b>Email:</b> Usa un indirizzo valido.</li>
                             <li><b>Password:</b> Scegli una password di almeno 6 caratteri.</li>
                         </ul>
@@ -299,7 +529,9 @@
                     <span class="material-icons">warning</span>
                     <div>
                         <strong>Attenzione: Assegnazione Gruppo</strong><br>
-                        Dopo la registrazione, il tuo account sarà attivo ma potresti non vedere ancora le segnalazioni del tuo quartiere. Questo è normale: devi contattare il tuo <b>Coordinatore di Zona</b> affinché ti assegni al gruppo corretto (es. "Gruppo Via Roma").
+                        Dopo la registrazione, il tuo account sarà attivo ma potresti non vedere ancora le segnalazioni
+                        del tuo quartiere. Questo è normale: devi contattare il tuo <b>Coordinatore di Zona</b> affinché
+                        ti assegni al gruppo corretto (es. "Gruppo Via Roma").
                     </div>
                 </div>
             </section>
@@ -307,22 +539,26 @@
             <!-- INTRODUZIONE E RUOLI -->
             <section id="intro" class="manual-section">
                 <h2><span class="material-icons" style="color:var(--primary-dark)">info</span> Introduzione e Ruoli</h2>
-                <p>L'app C.d.V Grosseto serve a coordinare le osservazioni dei cittadini per prevenire crimini e degrado. L'accesso è strettamente personale.</p>
-                
+                <p>L'app C.d.V Grosseto serve a coordinare le osservazioni dei cittadini per prevenire crimini e
+                    degrado. L'accesso è strettamente personale.</p>
+
                 <h3>Gerarchia Utenti</h3>
                 <p>L'app mostra funzioni diverse in base al tuo ruolo:</p>
                 <ul style="list-style: none; padding: 0;">
                     <li style="background:#f9fafb; padding:10px; border-left:4px solid #9ca3af; margin-bottom:10px;">
                         <b>👤 Utente Base</b><br>
-                        Può inserire segnalazioni, vedere la mappa del proprio quartiere e usare la bacheca. Non può cancellare segnalazioni altrui.
+                        Può inserire segnalazioni, vedere la mappa del proprio quartiere e usare la bacheca. Non può
+                        cancellare segnalazioni altrui.
                     </li>
                     <li style="background:#fff7ed; padding:10px; border-left:4px solid #f97316; margin-bottom:10px;">
                         <b>🎖️ Coordinatore di Gruppo</b><br>
-                        Gestisce il suo quartiere. Può <b>Convalidare</b> le segnalazioni (confermarle), archiviarle e gestire gli utenti del suo gruppo.
+                        Gestisce il suo quartiere. Può <b>Convalidare</b> le segnalazioni (confermarle), archiviarle e
+                        gestire gli utenti del suo gruppo.
                     </li>
                     <li style="background:#fef2f2; padding:10px; border-left:4px solid #ef4444;">
                         <b>👑 Coordinatore Generale (Super Admin)</b><br>
-                        Vede tutti i gruppi, crea nuovi quartieri, genera Dossier PDF globali e ha controllo totale sul sistema.
+                        Vede tutti i gruppi, crea nuovi quartieri, genera Dossier PDF globali e ha controllo totale sul
+                        sistema.
                     </li>
                 </ul>
             </section>
@@ -337,6 +573,10 @@
                     <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
                         <span class="material-icons" style="color:#ef4444">location_on</span>
                         <span><b>Rosso: Sospetto</b> (Furti, auto sospette, persone estranee)</span>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+                        <span class="material-icons" style="color:#ef4444; text-shadow: 0 0 5px red;">campaign</span>
+                        <span><b>ROSSO PULSANTE: EMERGENZA</b> (Pericolo imminente, allarme sonoro attivo)</span>
                     </div>
                     <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
                         <span class="material-icons" style="color:#10b981">location_on</span>
@@ -356,26 +596,38 @@
                     <span class="material-icons">hub</span>
                     <div>
                         <strong>Cosa sono i cerchi blu con i numeri?</strong><br>
-                        Si chiamano "Cluster". Quando ci sono molte segnalazioni vicine, l'app le raggruppa per non intasare la mappa. Clicca sul cerchio blu per ingrandire e vedere le singole segnalazioni.
+                        Si chiamano "Cluster". Quando ci sono molte segnalazioni vicine, l'app le raggruppa per non
+                        intasare la mappa. Clicca sul cerchio blu per ingrandire e vedere le singole segnalazioni.
                     </div>
                 </div>
             </section>
 
             <!-- SEGNALAZIONE -->
             <section id="segnalazione" class="manual-section">
-                <h2><span class="material-icons" style="color:var(--primary-dark)">add_alert</span> Inviare una Segnalazione</h2>
-                
+                <h2><span class="material-icons" style="color:var(--primary-dark)">add_alert</span> Inviare una
+                    Segnalazione</h2>
+
                 <h3>Procedura Corretta</h3>
                 <ol>
                     <li>Premi il tasto <b>(+)</b> in basso a destra.</li>
-                    <li><b>Tocca sulla mappa:</b> Non trascinare. Tocca semplicemente col dito il punto esatto dove è avvenuto il fatto. Apparirà un pin rosso temporaneo.</li>
+                    <li><b>Tocca sulla mappa:</b> Non trascinare. Tocca semplicemente col dito il punto esatto dove è
+                        avvenuto il fatto. Apparirà un pin rosso temporaneo.</li>
                     <li>Se il punto è giusto, premi il tasto nero <b>CONFERMA</b> che appare in basso.</li>
                     <li>Compila il modulo (Categoria e Descrizione).</li>
                 </ol>
 
+                <div class="info-box warning">
+                    <span class="material-icons">share_location</span>
+                    <div>
+                        <strong>Recinto Virtuale (Geofencing)</strong><br>
+                        Puoi inserire segnalazioni <b>SOLO all'interno del tuo quartiere</b>.
+                        Se provi a mettere un punto fuori dal confine assegnato al tuo gruppo, l'app bloccherà l'invio.
+                    </div>
+                </div>
+
                 <h3>Esempi di Descrizione</h3>
                 <p>La qualità della segnalazione è fondamentale. Rispetta la privacy.</p>
-                
+
                 <div class="table-responsive">
                     <table class="example-table">
                         <thead>
@@ -408,8 +660,10 @@
 
             <!-- RICERCA -->
             <section id="ricerca" class="manual-section">
-                <h2><span class="material-icons" style="color:var(--primary-dark)">search</span> Ricerca Intelligente & Filtri</h2>
-                <p>L'app utilizza un sistema di ricerca avanzato che comprende il linguaggio naturale e corregge i tuoi errori.</p>
+                <h2><span class="material-icons" style="color:var(--primary-dark)">search</span> Ricerca Intelligente &
+                    Filtri</h2>
+                <p>L'app utilizza un sistema di ricerca avanzato che comprende il linguaggio naturale e corregge i tuoi
+                    errori.</p>
 
                 <h3>Sinonimi e Correzione Errori</h3>
                 <div class="info-box tip">
@@ -417,9 +671,11 @@
                     <div>
                         <strong>Il sistema ti capisce:</strong><br>
                         <ul>
-                            <li>Se cerchi <b>"Macchina"</b>, troverà anche segnalazioni con scritto "Auto", "Veicolo", "Vettura", "SUV".</li>
+                            <li>Se cerchi <b>"Macchina"</b>, troverà anche segnalazioni con scritto "Auto", "Veicolo",
+                                "Vettura", "SUV".</li>
                             <li>Se cerchi <b>"Ragazzi"</b>, troverà anche "Giovani", "Adolescenti".</li>
-                            <li>Se scrivi male, es. <b>"Maccina"</b> o <b>"Furgone"</b>, l'app correggerà l'errore e troverà comunque i risultati.</li>
+                            <li>Se scrivi male, es. <b>"Maccina"</b> o <b>"Furgone"</b>, l'app correggerà l'errore e
+                                troverà comunque i risultati.</li>
                         </ul>
                     </div>
                 </div>
@@ -435,14 +691,24 @@
 
             <!-- AREA ADMIN -->
             <section id="admin" class="manual-section">
-                <h2><span class="material-icons" style="color:var(--primary-dark)">admin_panel_settings</span> Area Coordinatori e Admin</h2>
-                
+                <h2><span class="material-icons" style="color:var(--primary-dark)">admin_panel_settings</span> Area
+                    Coordinatori e Admin</h2>
+
                 <h3>1. Convalidare e Archiviare</h3>
                 <p>Nella scheda mappa o bacheca, i coordinatori vedono pulsanti extra:</p>
                 <ul>
                     <li><b>Convalida:</b> Conferma che la segnalazione è attendibile. L'icona diventa più scura.</li>
                     <li><b>Archivia:</b> Sposta la segnalazione nello storico "invisibile" per pulire la mappa.</li>
                 </ul>
+
+                <div class="info-box tip">
+                    <span class="material-icons">history</span>
+                    <div>
+                        <strong>Consultare lo Storico (Novità v71)</strong><br>
+                        Solo i Coordinatori possono vedere le vecchie segnalazioni.
+                        Vai nella <b>Bacheca</b> e spunta la casella <b>"Includi Archiviate"</b> nei filtri in alto.
+                    </div>
+                </div>
 
                 <h3>2. Creare un Dossier PDF</h3>
                 <p>Per inviare un report alle autorità:</p>
@@ -458,43 +724,67 @@
                 <h3>3. Gestione Gruppi (Solo Super Admin)</h3>
                 <p>Nella scheda <b>Gestione</b>, espandi la sezione "Gestione Gruppi".</p>
                 <ul>
-                    <li><b>Nuovo Gruppo:</b> Scrivi il nome, clicca "Imposta Centro", tocca sulla mappa il centro del quartiere e salva.</li>
-                    <li><b>Modifica Posizione:</b> Clicca la matita ✏️ accanto al gruppo per spostare il centro geografico.</li>
+                    <li><b>Nuovo Gruppo:</b> Scrivi il nome, clicca "Imposta Centro", tocca sulla mappa il centro del
+                        quartiere e salva.</li>
+                    <li><b>Modifica Posizione:</b> Clicca la matita ✏️ accanto al gruppo per spostare il centro
+                        geografico.</li>
                 </ul>
+
+                <h3>4. Disegnare Area di Competenza (Geofencing)</h3>
+                <p>Per definire i confini esatti entro cui gli utenti possono segnalare:</p>
+                <ol>
+                    <li>Vai in <b>Gestione Gruppi</b> e clicca sul pulsante <b>"Disegna Area"</b> (icona pentagono)
+                        accanto al nome del gruppo.</li>
+                    <li>La mappa andrà in modalità disegno.</li>
+                    <li><b>Tocca sulla mappa</b> per creare i vertici del poligono (i "paletti" del recinto).</li>
+                    <li>Per chiudere e salvare l'area, tocca nuovamente sul <b>primo punto</b> (quello verde).</li>
+                    <li>Se sbagli, usa il tasto "Admin: Reset Area" per cancellare e rifare.</li>
+                </ol>
             </section>
 
             <!-- FAQ -->
             <section id="faq" class="manual-section">
-                <h2><span class="material-icons" style="color:var(--primary-dark)">help_outline</span> Risoluzione Problemi (FAQ)</h2>
-                
+                <h2><span class="material-icons" style="color:var(--primary-dark)">help_outline</span> Risoluzione
+                    Problemi (FAQ)</h2>
+
                 <div style="margin-bottom:20px">
                     <h4>✏️ Ho sbagliato a scrivere, come cancello?</h4>
-                    <p>Gli utenti base <b>non possono cancellare</b> autonomamente le segnalazioni per motivi di sicurezza e tracciabilità. Devi contattare subito il tuo Coordinatore, che provvederà a rimuoverla o modificarla per te.</p>
+                    <p>Gli utenti base <b>non possono cancellare</b> autonomamente le segnalazioni per motivi di
+                        sicurezza e tracciabilità. Devi contattare subito il tuo Coordinatore, che provvederà a
+                        rimuoverla o modificarla per te.</p>
                 </div>
 
                 <div style="margin-bottom:20px">
                     <h4>👁️ Chi vede il mio nome?</h4>
-                    <p>Il tuo nome e cognome sono visibili <b>solo ai membri del tuo gruppo</b> di controllo del vicinato. Questo serve a garantire che ogni segnalazione abbia una "faccia" e sia responsabile, scoraggiando falsi allarmi anonimi.</p>
+                    <p>Il tuo nome e cognome sono visibili <b>solo ai membri del tuo gruppo</b> di controllo del
+                        vicinato. Questo serve a garantire che ogni segnalazione abbia una "faccia" e sia responsabile,
+                        scoraggiando falsi allarmi anonimi.</p>
                 </div>
 
                 <div style="margin-bottom:20px">
                     <h4>📡 L'app funziona senza Internet?</h4>
-                    <p>Puoi aprire l'app e vedere la struttura anche senza internet, ma per inviare una segnalazione o ricevere gli aggiornamenti in tempo reale <b>è necessaria una connessione dati (4G/5G/WiFi)</b> attiva.</p>
+                    <p>Puoi aprire l'app e vedere la struttura anche senza internet, ma per inviare una segnalazione o
+                        ricevere gli aggiornamenti in tempo reale <b>è necessaria una connessione dati (4G/5G/WiFi)</b>
+                        attiva.</p>
                 </div>
 
                 <div style="margin-bottom:20px">
                     <h4>📍 Il GPS non è preciso</h4>
-                    <p>L'app dipende dal GPS del telefono. Se sei al chiuso, potrebbe sbagliare di qualche metro. Usa il tasto <b>Mirino</b> sulla destra per ricalibrare, o sposta manualmente il punto toccando sulla mappa.</p>
+                    <p>L'app dipende dal GPS del telefono. Se sei al chiuso, potrebbe sbagliare di qualche metro. Usa il
+                        tasto <b>Mirino</b> sulla destra per ricalibrare, o sposta manualmente il punto toccando sulla
+                        mappa.</p>
                 </div>
 
                 <div style="margin-bottom:20px">
                     <h4>📧 Non ricordo la password</h4>
-                    <p>Contatta un Admin. Per ora il reset password deve essere gestito manualmente o facendo logout e registrandosi con una nuova mail (l'Admin poi unirà i dati se necessario).</p>
+                    <p>Contatta un Admin. Per ora il reset password deve essere gestito manualmente o facendo logout e
+                        registrandosi con una nuova mail (l'Admin poi unirà i dati se necessario).</p>
                 </div>
 
                 <div style="margin-bottom:20px">
                     <h4>👥 Vedo "Senza Gruppo"</h4>
-                    <p>Sei registrato ma nessun coordinatore ti ha ancora assegnato al tuo quartiere. Finché non vieni assegnato, potrai vedere solo una mappa generica vuota o limitata.</p>
+                    <p>Sei registrato ma nessun coordinatore ti ha ancora assegnato al tuo quartiere. Finché non vieni
+                        assegnato, potrai vedere solo una mappa generica vuota o limitata.</p>
                 </div>
             </section>
 
@@ -506,7 +796,7 @@
         function activateNav(element) {
             document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
             element.classList.add('active');
-            
+
             // Su mobile chiudi sidebar dopo click
             if (window.innerWidth <= 768) toggleSidebar();
         }
@@ -559,4 +849,5 @@
         }
     </script>
 </body>
+
 </html>
