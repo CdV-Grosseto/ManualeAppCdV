@@ -423,6 +423,9 @@
             </a>
 
             <!-- MENU MANUALE -->
+            <a href="#novita" class="nav-item" onclick="activateNav(this)">
+                <span class="material-icons">new_releases</span> Novità 2025
+            </a>
             <a href="#installazione" class="nav-item active" onclick="activateNav(this)">
                 <span class="material-icons">download</span> Installazione App
             </a>
@@ -449,7 +452,7 @@
             </a>
         </nav>
         <div style="padding: 20px; font-size: 0.75rem; color: #9ca3af; text-align: center;">
-            Versione 2.6<br>Aggiornato al 2025
+            Versione 3.0<br>Aggiornato al 2025
         </div>
     </aside>
 
@@ -469,6 +472,30 @@
         </header>
 
         <div class="content-scroll" id="contentArea">
+
+            <!-- NOVITÀ -->
+            <section id="novita" class="manual-section">
+                <h2><span class="material-icons" style="color:var(--primary-dark)">new_releases</span> Novità &
+                    Aggiornamenti</h2>
+                <p>Ecco le principali novità introdotte con l'ultimo aggiornamento:</p>
+
+                <div class="info-box tip">
+                    <span class="material-icons">stars</span>
+                    <div>
+                        <strong>Nuove Funzionalità:</strong>
+                        <ul style="margin-top:10px;">
+                            <li><b>🚨 Allarmi Emergenza:</b> I Coordinatori Generali possono ora inviare avvisi urgenti
+                                con sirena a tutti gli utenti.</li>
+                            <li><b>📍 Nuova Segnalazione "Furti":</b> Introdotto il marker <b>BLU</b> specifico per
+                                segnalare i furti.</li>
+                            <li><b>📝 Dati Profilo Obbligatori:</b> Per maggiore sicurezza, nella fase di registrazione,
+                                indirizzo e telefono sono ora obbligatori.</li>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
             <!-- INSTALLAZIONE -->
             <section id="installazione" class="manual-section">
@@ -520,6 +547,8 @@
                             </li>
                             <li><b>Email:</b> Usa un indirizzo valido.</li>
                             <li><b>Password:</b> Scegli una password di almeno 6 caratteri.</li>
+                            <li><b>Indirizzo e Telefono:</b> <span class="tag degrado">Obbligatori</span> Necessari per
+                                la verifica dell'identità da parte del Coordinatore.</li>
                         </ul>
                     </li>
                     <li>Premi il tasto <b>Registrati</b>.</li>
@@ -572,7 +601,11 @@
                 <div class="example-table">
                     <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
                         <span class="material-icons" style="color:#ef4444">location_on</span>
-                        <span><b>Rosso: Sospetto</b> (Furti, auto sospette, persone estranee)</span>
+                        <span><b>Rosso: Sospetto</b> (Auto sospette, persone estranee)</span>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+                        <span class="material-icons" style="color:#3B82F6">location_on</span>
+                        <span><b>Blu: Furti</b> (Furti in abitazione, tentativi di effrazione)</span>
                     </div>
                     <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
                         <span class="material-icons" style="color:#ef4444; text-shadow: 0 0 5px red;">campaign</span>
@@ -685,6 +718,7 @@
                 <ul>
                     <li><b>📅 Oggi:</b> Solo eventi delle ultime 24h.</li>
                     <li><b>📅 7 Giorni:</b> Ultima settimana.</li>
+                    <li><b>📅 30 Giorni:</b> Ultimo mese.</li>
                     <li><b>📅 Tutto:</b> Storico completo (escluso archivio).</li>
                 </ul>
             </section>
@@ -740,6 +774,16 @@
                     <li>Per chiudere e salvare l'area, tocca nuovamente sul <b>primo punto</b> (quello verde).</li>
                     <li>Se sbagli, usa il tasto "Admin: Reset Area" per cancellare e rifare.</li>
                 </ol>
+
+                <h3>5. Dashboard Avanzata & Emergenze</h3>
+                <p>I Coordinatori Generali hanno accesso a strumenti avanzati:</p>
+                <ul>
+
+                    <li><b>Allarme Emergenza:</b> Un tasto dedicato per inviare una notifica sonora a tutti gli utenti
+                        in caso di pericolo imminente (es. calamità, pericolo pubblico).</li>
+                    <li><b>Stampa Registro:</b> Il Coordinatore Generale può stampare l'intero registro utenti. I
+                        Coordinatori di Gruppo possono stampare solo il proprio gruppo.</li>
+                </ul>
             </section>
 
             <!-- FAQ -->
